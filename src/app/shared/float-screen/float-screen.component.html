@@ -1,0 +1,26 @@
+<div id="container" fxLayout="column" fxLayoutAlign="start stretch" style="width: 99%;">
+    <!-- Button container aligned to the right -->
+    <div fxLayout="row" fxLayoutAlign="end center" class="toggle-section">
+        <button mat-mini-fab class="button-class" (click)="handleToggle()">
+            <mat-icon *ngIf="isVisible$ | async">keyboard_arrow_down</mat-icon>
+            <mat-icon *ngIf="!(isVisible$ | async)">keyboard_arrow_up</mat-icon>
+        </button>
+    </div>
+
+    <!-- Image row -->
+    <div *ngIf="isVisible$ | async" fxLayout="row" fxLayoutAlign="start center" class="content-section"
+        style="border-top: 1px solid #d9d9d9">
+        <img src="assets/images/rocket_icon.png" class="optimizer-image" alt="rocketicon">
+        <!-- footer progress -->
+        <div fxLayout='column' fxLayoutAlign='start center' style="width: 100%;">
+            <div fxLayout='row' fxLayoutAlign='start center' style="width: 100%;">
+                <div fxFlex="50" fxLayoutAlign='start center'>Migrating Data to selected environment</div>
+                <div fxFlex="50" fxLayoutAlign='end center' style="padding-right: 20px;">{{progressPercentage}}</div>
+            </div>
+            <div fxLayout='row' fxLayoutAlign='start center' style="width: 100%;">
+                <mat-progress-bar mode="determinate" value="{{progressPercentage}}" class="progress-icon-style">
+                </mat-progress-bar>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<mat-toolbar id="header-container" fxLayout="row" fxLayoutAlign="center center">
+<div class="pl15">
+    <img class="header-icon" src="assets/images/amplelogic_logo.jpg" alt="logo">
+</div>
+
+<!-- Organization Strucutrue -->
+<div style="padding-left: 15px;">
+    <button mat-button [matMenuTriggerFor]="organizationMenu">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-icon style="color: blue;">perm_contact_calendar</mat-icon> 
+            <span class="header-item-font-style">Organization Structure</span>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </button>
+    <mat-menu #organizationMenu="matMenu">
+        <button mat-menu-item>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <span>Disable alerts</span>
+        </button>
+    </mat-menu>
+</div>
+
+<!-- Configurations -->
+<div style="padding-left: 15px;">
+    <button mat-button [matMenuTriggerFor]="configMenu">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-icon style="color: blue;">settings_applications</mat-icon> 
+            <span class="header-item-font-style">Configurations</span>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </button>
+    <mat-menu #configMenu="matMenu">
+        <button mat-menu-item>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <span>Disable alerts</span>
+        </button>
+    </mat-menu>
+</div>
+
+<!-- Reports -->
+<div style="padding-left: 15px;">
+    <button mat-button [matMenuTriggerFor]="reportsMenu">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-icon style="color: blue;">file_copy</mat-icon> 
+            <span class="header-item-font-style">Reports</span>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </button>
+    <mat-menu #reportsMenu="matMenu">
+        <button mat-menu-item>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <span>Disable alerts</span>
+        </button>
+    </mat-menu>
+</div>
+
+<!-- ETL -->
+<div style="padding-left: 15px;">
+    <button mat-button [matMenuTriggerFor]="etlMenu">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-icon style="color: blue;">settings_applications</mat-icon> 
+            <span class="header-item-font-style">ETL</span>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </button>
+    <mat-menu #etlMenu="matMenu">
+        <button mat-menu-item>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <span>Disable alerts</span>
+        </button>
+    </mat-menu>
+</div>
+
+<div fxFlex fxLayout fxLayoutAlign="end center" class="profile-section">
+    <div id="alerts-section">
+        <mat-icon style="color: rgb(255, 79, 79)">add_alert</mat-icon>
+    </div>
+    <div id="profile-photo-container">
+        <img class="profile-image" src="assets/images/profile.png" alt="profile-image">
+    </div>
+</div>
+
+</mat-toolbar>

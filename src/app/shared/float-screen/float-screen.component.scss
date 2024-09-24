@@ -1,0 +1,29 @@
+@import "../../../styles.scss";
+#container {
+    position: fixed !important;
+    bottom: 12px;
+}
+
+.button-class {
+    background-color: #256AE9 !important;
+    color: #ffffff !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-left-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
+}
+
+.toggle-section {
+  width: 100%;
+  padding-right: 40px !important;
+}
+
+.content-section {
+    background-color: white;
+}
+
+.progress-icon-style {
+    height: 16px;
+    padding-top: 0;
+    color: #212121 !important;
+}

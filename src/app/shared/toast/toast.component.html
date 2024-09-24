@@ -1,0 +1,42 @@
+<div fxLayout='column' id="toast-container" ngClass.xs="w100p" fxLayoutAlign.xs='center center'>
+    <ng-container *ngFor="let toast of toastList">
+        <div fxLayout='column' class="toast-card-style"
+            [ngClass]="{'error-icon-style': toast.type === config.error, 'success-icon-style': toast.type === config.success}"
+            fxLayoutAlign.xs='center center'>
+            <div fxLayout='row' fxFlex = "100">
+
+                <!-- Toast Styles: success, error -->
+                <div fxLayout='column' fxLayoutAlign='center center' *ngIf="toast.type === config.error" fxFlex = "10">
+                    <mat-icon class="toast-icon-style error-icon-style">done</mat-icon>
+                </div>
+                <div fxLayout='column' fxLayoutAlign='center center' *ngIf="toast.type === config.success" fxFlex = "10">
+                    <mat-icon class="success-icon-style toast-icon-style">done</mat-icon>
+                </div>
+
+                <!-- Header & Body Content -->
+                <div fxLayout='column' class="pl10" fxLayoutAlign.xs='center center' fxFlex = "80">
+                    <div fxLayout='row' class="toast-header-style f20">
+                        {{toast.headerMessage}}
+                    </div>
+                    <div fxLayout='row' class="toast-content-style f16">
+                        {{toast.message}}
+                    </div>
+                </div>
+
+                <!-- Close Icon -->
+                <div fxLayout="column" fxLayoutAlign="start end" fxLayoutAlign.xs='center center' fxFlex = "10">
+                    <mat-icon (click)="hideToast()" ngClass.gt-xs="pl27" ngClass.sm="pr24" ngClass.xs="pr12 f30 pl10"
+                        class="h24px w24px f16 color-grey1-font-color cursor-pointer">
+                        close
+                    </mat-icon>
+                </div>
+            </div>
+
+            <!-- footer progress -->
+            <div fxLayout='row' fxLayoutAlign='start center'>
+                <mat-progress-bar mode="determinate" value="{{toast.progress}}" class="progress-icon-style">
+                </mat-progress-bar>
+            </div>
+        </div>
+    </ng-container>
+</div>
